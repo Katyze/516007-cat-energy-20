@@ -33,12 +33,12 @@
   </header>
 
   <main class="page-main">
-    <h1>Каталог продукции</h1>
     <section class="catalog">
+      <h1 class="catalog__title">Каталог продукции</h1>
       <ul class="catalog__list list">
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--chicken500" src="#"
+            <img class="catalog__product-image catalog__product-image--chicken500" src="img/chicken-small-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с курицей 500 грамм">
           </a>
           <div class="catalog__description">
@@ -64,7 +64,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--chicken1000" src="#"
+            <img class="catalog__product-image catalog__product-image--chicken1000" src="img/chicken-big-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с курицей 1000 грамм">
           </a>
           <div class="catalog__description">
@@ -90,7 +90,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--fish500" src="#"
+            <img class="catalog__product-image catalog__product-image--fish500" src="img/fish-small-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с рыбой 500 грамм">
           </a>
           <div class="catalog__description">
@@ -116,7 +116,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--fish1000" src="#"
+            <img class="catalog__product-image catalog__product-image--fish1000" src="img/fish-big-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с рыбой 1000 грамм">
           </a>
           <div class="catalog__description">
@@ -142,7 +142,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--buckwheat500" src="#"
+            <img class="catalog__product-image catalog__product-image--buckwheat500" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с гречкой 500 грамм">
           </a>
           <div class="catalog__description">
@@ -168,7 +168,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--buckwheat1000" src="#"
+            <img class="catalog__product-image catalog__product-image--buckwheat1000" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с гречкой 1000 грамм">
           </a>
           <div class="catalog__description">
@@ -194,7 +194,7 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__image-link" href="#" aria-label="На товар из каталога">
-            <img class="catalog__product-image catalog__product-image--rice500" src="#"
+            <img class="catalog__product-image catalog__product-image--rice500" src="img/rice-small-mobile@1x.jpg" width="140" height="144"
               alt="Кэт энерджи с рисом 500 грамм">
           </a>
           <div class="catalog__description">
@@ -227,15 +227,15 @@
     </section>
     <section class="additional-goods">
       <h2 class="additional-goods__title">Дополнительные товары</h2>
-      <ul class="additional-goods__list">
+      <ul class="additional-goods__list list">
         <li class="additional-goods__item">
           <h3 class="additional-goods__item-title">
             <a class="additional-goods__link" href="#">Сахарозаменитель</a>
           </h3>
-          <table class="additional-goods__product-value">
+          <table class="additional-goods__product-value ">
             <tr>
-              <td class="additional-goods__product-weight">1 упаковка (100 г)</td>
-              <td class="additional-goods__product-price">200 р.</td>
+              <td class="additional-goods__product-value additional-goods__product-weight">1 упаковка (100 г)</td>
+              <td class="additional-goods__product-value additional-goods__product-price">200 р.</td>
             </tr>
           </table>
           <a class="additional-goods__button button" href="#">Заказать</a>
@@ -244,10 +244,10 @@
           <h3 class="additional-goods__item-title">
             <a class="additional-goods__link" href="#">Питьевая вода</a>
           </h3>
-          <table class="additional-goods__product-value">
+          <table>
             <tr>
-              <td class="additional-goods__product-weight">5 литров</td>
-              <td class="additional-goods__product-price">50 р.</td>
+              <td class="additional-goods__product-value additional-goods__product-weight">5 литров</td>
+              <td class="additional-goods__product-value additional-goods__product-price">50 р.</td>
             </tr>
           </table>
           <a class="additional-goods__button button" href="#">Заказать</a>
@@ -256,10 +256,10 @@
           <h3 class="additional-goods__item-title">
             <a class="additional-goods__link" href="#">Молоко</a>
           </h3>
-          <table class="additional-goods__product-value">
+          <table>
             <tr>
-              <td class="additional-goods__product-weight">1 литр</td>
-              <td class="additional-goods__product-price">100 р.</td>
+              <td class="additional-goods__product-value additional-goods__product-weight">1 литр</td>
+              <td class="additional-goods__product-value additional-goods__product-price">100 р.</td>
             </tr>
           </table>
           <a class="additional-goods__button button" href="#">Заказать</a>
@@ -268,10 +268,10 @@
           <h3 class="additional-goods__item-title">
             <a class="additional-goods__link" href="#">Витамины</a>
           </h3>
-          <table class="additional-goods__product-value">
+          <table>
             <tr>
-              <td class="additional-goods__product-weight">1 упаковка (30 г)</td>
-              <td class="additional-goods__product-price">300 р.</td>
+              <td class="additional-goods__product-value additional-goods__product-weight">1 упаковка (30 г)</td>
+              <td class="additional-goods__product-value additional-goods__product-price">300 р.</td>
             </tr>
           </table>
           <a class="additional-goods__button button" href="#">Заказать</a>
