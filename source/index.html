@@ -11,7 +11,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" aria-label="На главную">
-        <img src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="280" height="270">
+        <img src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="195" height="40">
       </a>
       <nav class="main-nav" aria-label="Навигация по сайту">
         <button class="main-nav__button" type="button">
@@ -35,13 +35,15 @@
   <main class="page-main">
     <h1 class="visually-hidden">Кэт энерджи - магазин функционального питания для котов</h1>
     <section class="promo">
-      <h3 class="visually-hidden">Рекламный баннер с подбором питания</h3>
-      <div class="promo__text">
-        <p class="promo__title">Функциональное питание для котов</p>
-        <p class="promo__tagline">Занялся собой? Займись котом!</p>
+      <div class="promo-wrapper">
+        <h3 class="visually-hidden">Рекламный баннер с подбором питания</h3>
+        <div class="promo__text">
+          <p class="promo__title">Функциональное питание для котов</p>
+          <p class="promo__tagline">Занялся собой? Займись котом!</p>
+        </div>
+        <img class="promo__product" src="img/index-can-mobile@1x.png" alt="Кэт энерджи с курицей 500 грамм">
+        <a class="promo__link button" href="form.html">Подобрать программу</a>
       </div>
-      <img class="promo__product" src="img/index-can-mobile@1x.png" alt="Кэт энерджи с курицей 500 грамм">
-      <a class="promo__link button" href="form.html">Подобрать программу</a>
     </section>
     <section class="services">
       <h2 class="visually-hidden">Программы корректировки веса питомца</h2>
@@ -74,35 +76,37 @@
       </ul>
     </section>
     <section class="sample-program">
-      <h3 class="sample-program__title">Живой пример</h3>
-      <p class="sample-program__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="sample-program__description-list">
-        <div class="sample-program__description-item">
-          <dt class="sample-program__description-term">5 кг</dt>
-          <dd class="sample-program__description-details">снижение веса</dd>
-        </div>
-        <div class="sample-program__description-item">
-          <dt class="sample-program__description-term">60 дней</dt>
-          <dd class="sample-program__description-details">затрачено времени</dd>
-        </div>
-      </dl>
-      <p class="sample-program__cost">Затраты на питание: 15 000 руб. </p>
-      <div class="slider">
-        <ul class="slider__image-list list">
-          <li class="slider__image-item slider__image-item--before">
-            <img class="slider__image" src="img/before-mobile@1x.png" alt="Фото кота до">
-          </li>
-          <li class="slider__image-item slider__image-item--after">
-            <img class="slider__image" src="img/after-mobile@1x.png" alt="Фото кота после">
-          </li>
-        </ul>
-        <div class="slider__control">
-          <button class="slider__button slider__button--prev" type="button"
-            aria-label="Переключает изображения с котами назад">Было</button>
-          <button class="slider__button slider__button--next" type="button"
-            aria-label="Переключает изображения с котами вперед">Стало</button>
+      <div class="sample-program__wrapper">
+        <h3 class="sample-program__title">Живой пример</h3>
+        <p class="sample-program__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без
+          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="sample-program__description-list">
+          <div class="sample-program__description-item">
+            <dt class="sample-program__description-term">5 кг</dt>
+            <dd class="sample-program__description-details">снижение веса</dd>
+          </div>
+          <div class="sample-program__description-item">
+            <dt class="sample-program__description-term">60 дней</dt>
+            <dd class="sample-program__description-details">затрачено времени</dd>
+          </div>
+        </dl>
+        <p class="sample-program__cost">Затраты на питание: 15 000 руб. </p>
+        <div class="slider">
+          <ul class="slider__image-list list">
+            <li class="slider__image-item slider__image-item--before">
+              <img class="slider__image" src="img/before-mobile@1x.png" alt="Фото кота до">
+            </li>
+            <li class="slider__image-item slider__image-item--after">
+              <img class="slider__image" src="img/after-mobile@1x.png" alt="Фото кота после">
+            </li>
+          </ul>
+          <div class="slider__control">
+            <button class="slider__button slider__button--prev" type="button"
+              aria-label="Переключает изображения с котами назад">Было</button>
+            <button class="slider__button slider__button--next" type="button"
+              aria-label="Переключает изображения с котами вперед">Стало</button>
+          </div>
         </div>
       </div>
     </section>
@@ -113,7 +117,7 @@
         <address class="contacts-address">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
       <iframe class="contacts-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7995.1238758888085!2d30.319539069445312!3d59.935776580491556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1594840648602!5m2!1sru!2sru"></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.2378918292!2d30.32051491863738!3d59.938712817680646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595881327202!5m2!1sru!2sru"></iframe>
     </section>
   </main>
 
