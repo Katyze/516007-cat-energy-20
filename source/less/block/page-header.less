@@ -13,4 +13,15 @@
   display: flex;
   flex-direction: column;
   padding: 12px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 42px 30px;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-container;
+    padding: 71px 40px;
+  }
 }
