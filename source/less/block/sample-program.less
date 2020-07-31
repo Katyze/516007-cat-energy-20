@@ -1,9 +1,25 @@
 .sample-program {
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 43px 30px 0 30px;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-container;
+    padding: 62px 40px 0 40px;
+    background-color: @basic-grey;
+  }
 }
 
 .sample-program__wrapper {
   padding: 27px 20px 25px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .sample-program__title {
@@ -19,6 +35,10 @@
   margin: 0;
   font-family: @font-arial;
   color: @special-darkgrey2;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .sample-program__description-list {

@@ -3,6 +3,17 @@
   padding-bottom: 22px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-container;
+    padding: 0 40px 82px 40px;
+  }
 }
 
 .promo-wrapper {
@@ -22,3 +33,4 @@
   text-transform: uppercase;
   color: @basic-white;
 }
+

@@ -1,10 +1,32 @@
 .contacts {
-  background-color: @basic-grey;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: @desktop-container;
+  }
 }
 
 .contacts-wrapper {
   display: flex;
   padding: 28px 20px 22px 20px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    padding: 66px 30px 51px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    background-color: @basic-white;
+    padding-right: 89px;
+    padding-left: 76px;
+  }
 }
 
 .contacts-title {
