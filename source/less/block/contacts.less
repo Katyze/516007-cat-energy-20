@@ -1,15 +1,18 @@
 .contacts {
   @media (min-width: @tablet-width) {
-    width: 768px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    width: @desktop-container;
   }
 }
 
-.contacts-wrapper {
+.contacts__wrapper--color {
+  background-color: @basic-grey;
+}
+
+.contacts__wrapper {
   display: flex;
   padding: 28px 20px 22px 20px;
 
@@ -29,20 +32,20 @@
   }
 }
 
-.contacts-title {
+.contacts__title {
   margin: 0;
   font-size: 16px;
   text-transform: uppercase;
 }
 
-.contacts-address {
+.contacts__address {
   font-family: @font-arial;
   line-height: 19px;
   color: @special-darkgrey2;
   font-style: normal;
 }
 
-.contacts-map {
+.contacts__map {
   width: 100%;
   min-height: 362px;
   border: none;

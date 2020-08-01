@@ -1,20 +1,32 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 
 .site-list__item {
-  padding: 20px 10px 22px 10px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    font-weight: normal;
+  }
 }
 
 .site-list__link {
+  display: block;
+  padding: 20px 10px 22px 10px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    padding: 47px 0;
+  }
 }
