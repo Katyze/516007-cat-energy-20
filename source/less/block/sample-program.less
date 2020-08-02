@@ -1,9 +1,23 @@
 .sample-program {
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+    background-color: @basic-grey;
+  }
 }
 
 .sample-program__wrapper {
   padding: 27px 20px 25px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .sample-program__title {
@@ -19,6 +33,10 @@
   margin: 0;
   font-family: @font-arial;
   color: @special-darkgrey2;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .sample-program__description-list {

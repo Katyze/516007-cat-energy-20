@@ -3,6 +3,15 @@
   padding-bottom: 22px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    padding-top: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 82px;
+  }
 }
 
 .promo-wrapper {
@@ -12,13 +21,31 @@
 
 .promo__title {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 34px;
-  line-height: 40px;
+  line-height: 36px;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    width: 414px;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @basic-black;
+  }
 }
 
 .promo__tagline {
+  margin: 0;
   text-transform: uppercase;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: @basic-black;
+  }
 }

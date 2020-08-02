@@ -1,5 +1,13 @@
 .about-product {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 11px;
+  }
 }
 
 .about-product__title {
@@ -10,9 +18,29 @@
   font-weight: normal;
 }
 
+.about-product__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 230px 230px;
+    column-gap: 158px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 230px 230px 230px 230px;
+    column-gap: 94px;
+  }
+}
+
 .about-product__item {
   margin-bottom: 24px;
   padding-left: 80px;
   font-family: @font-arial;
   color: @special-darkgrey2;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    margin: 0;
+    padding: 0;
+  }
 }

@@ -6,6 +6,10 @@
   display: block;
   width: 195px;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-header__wrapper {
@@ -13,4 +17,13 @@
   display: flex;
   flex-direction: column;
   padding: 12px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+  }
 }
