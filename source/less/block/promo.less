@@ -1,6 +1,5 @@
 .promo {
   min-height: 305px;
-  padding-bottom: 22px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 
@@ -15,6 +14,7 @@
 }
 
 .promo-wrapper {
+  position: relative;
   padding: 27px 20px 22px 20px;
   text-align: center;
 }
@@ -23,7 +23,7 @@
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
-  font-size: 34px;
+  font-size: 36px;
   line-height: 36px;
   color: @basic-white;
 
@@ -39,6 +39,7 @@
 
 .promo__tagline {
   margin: 0;
+  padding-bottom: 25px;
   text-transform: uppercase;
   color: @basic-white;
 
@@ -47,5 +48,16 @@
     line-height: 24px;
     text-align: left;
     color: @basic-black;
+  }
+}
+
+.promo__link {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 250px;
+    width: 224px;
+    padding: 15px 10px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
