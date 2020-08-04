@@ -2,13 +2,7 @@
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
-    background-color: @basic-white;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 62px;
-    background-color: @basic-grey;
+    padding: 0;
   }
 }
 
@@ -18,6 +12,22 @@
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.sample-program__wrapper-background {
+  @media (min-width: @tablet-width) {
+    padding: 43px 30px 54px 30px;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 570px;
+    padding: 62px 40px 75px 30px;
+  }
 }
 
 .sample-program__title {
@@ -26,27 +36,63 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 146px;
+  }
 }
 
 .sample-program__text {
   width: 279px;
   margin: 0;
+  margin-bottom: 25px;
   font-family: @font-arial;
   color: @special-darkgrey2;
 
   @media (min-width: @tablet-width) {
-    width: auto;
+    width: 700px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-bottom: 60px;
+  }
+}
+
+.sample-program__wrapper-description {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+    width: 366px;
   }
 }
 
 .sample-program__description-list {
   display: flex;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .sample-program__description-term {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .sample-program__description-details {
@@ -54,6 +100,11 @@
   font-size: 12px;
   line-height: 14px;
   color: @special-darkgrey2;
+
+  @media (min-width: @tablet-width) {
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
 .sample-program__cost {
@@ -61,4 +112,20 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+    margin: 0;
+  }
 }

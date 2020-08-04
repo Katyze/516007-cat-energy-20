@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 39px 20px 22px;
+  padding: 0 20px;
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
@@ -14,12 +14,22 @@
   }
 }
 
+.page-footer__logo-link {
+  display: block;
+  border-bottom: 1px solid @line-grey2;
+}
+
+.page-footer__footer-logo {
+  margin: 39px 76px 32px 76px;
+}
+
 .page-footer__social-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 130px;
   min-height: 63px;
-  margin: 0 auto;
+  padding-left: 73px;
+  padding-right: 73px;
+  border-bottom: 1px solid @line-grey2;
 }
