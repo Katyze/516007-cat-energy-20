@@ -5,22 +5,23 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding-top: 55px;
-    padding-bottom: 61px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 55px 40px 11px 40px;
   }
 }
 
 .page-footer__logo-link {
   display: block;
   border-bottom: 1px solid @line-grey2;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .page-footer__footer-logo {
   margin: 39px 76px 32px 76px;
+  @media (min-width: @tablet-width) {
+    margin: 60px 0;
+  }
 }
 
 .page-footer__social-list {
@@ -32,4 +33,10 @@
   padding-left: 73px;
   padding-right: 73px;
   border-bottom: 1px solid @line-grey2;
+
+  @media (min-width: @tablet-width) {
+    min-width: 130px;
+    padding: 0;
+    border-bottom: none;
+  }
 }
