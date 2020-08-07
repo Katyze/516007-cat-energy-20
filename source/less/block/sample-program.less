@@ -77,17 +77,29 @@
 
 .sample-program__description-list {
   display: flex;
+  justify-content: space-between;
   margin: 0;
+  margin-bottom: 33px;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 55px;
   }
 }
 
+.sample-program__description-item {
+  position: relative;
+}
+
 .sample-program__description-term {
+  width: 124px;
+  padding-top: 12px;
+  padding-bottom: 15px;
   font-size: 24px;
   line-height: 28px;
+  text-align: center;
   text-transform: uppercase;
+  border: 1px solid @special-grey2;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -96,10 +108,18 @@
 }
 
 .sample-program__description-details {
+  position: absolute;
+  top: 47px;
+  left: 17px;
+  width: 88px;
+  z-index: 2;
+  margin: 0 auto;
   font-family: @font-arial;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 13px;
+  text-align: center;
   color: @special-darkgrey2;
+  background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
     font-size: inherit;
