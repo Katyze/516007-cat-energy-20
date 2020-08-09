@@ -1,7 +1,11 @@
-@media (min-width: @tablet-width) {
-  .main-nav {
-    width: 440px;
+.main-nav {
+  @media (min-width: @tablet-width) {
+    width: 449px;
     margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 489px;
   }
 }
 
@@ -9,4 +13,8 @@
   position: absolute;
   top: 28px;
   right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
