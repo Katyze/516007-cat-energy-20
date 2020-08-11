@@ -1,46 +1,118 @@
 .about-product {
-  padding: 0 20px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 47px;
+    padding-bottom: 39px;
+    border-bottom: 1px solid @line-grey;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 11px;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
 
 .about-product__title {
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
   font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 64px;
+  }
 }
 
 .about-product__list {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 230px 230px;
-    column-gap: 158px;
+    grid-template-columns: 230px 249px;
+    column-gap: 153px;
     row-gap: 37px;
+    counter-reset: number;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 230px 230px 230px 230px;
-    column-gap: 94px;
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
   }
 }
 
 .about-product__item {
-  margin-bottom: 24px;
+  position: relative;
+  margin-bottom: 26px;
   padding-left: 80px;
   font-family: @font-arial;
   color: @special-darkgrey2;
 
   @media (min-width: @tablet-width) {
-    min-height: 280px;
+    min-height: 245px;
     margin: 0;
-    padding: 0;
+    padding: 143px 0 64px 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      counter-increment: number;
+      content: counter(number);
+      position: absolute;
+      right: 0;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: @font-oswald;
+      color: @basic-grey;
+      z-index: -1;
+    }
+
+    &--benefit::after,
+    &--composition::after {
+      top: -10px;
+    }
+
+
+    &--nutrition::after {
+      top: -8px;
+      right: -17px;
+    }
+
+    &--change::after {
+      top: -8px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--benefit::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--composition::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--nutrition::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--change::before {
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }

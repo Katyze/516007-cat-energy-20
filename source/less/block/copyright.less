@@ -1,4 +1,15 @@
-.copyright-name {
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 78px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 163px;
+  }
+}
+
+.copyright__name {
   font-family: @font-arial;
   font-size: 16px;
   color: @special-darkgrey2;
