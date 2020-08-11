@@ -55,37 +55,30 @@
     line-height: 24px;
 
     &::after {
-      counter-increment: number 1;
+      counter-increment: number;
+      content: counter(number);
       position: absolute;
+      right: 0;
       font-size: 280px;
       line-height: 280px;
-      font-family: "Oswald", sans-serif;
+      font-family: @font-oswald;
       color: @basic-grey;
       z-index: -1;
     }
 
-    &--benefit::after {
-      content: counter(number);
+    &--benefit::after,
+    &--composition::after {
       top: -10px;
-      left: 118px;
     }
 
-    &--composition::after {
-      content: counter(number);
-      top: -10px;
-      left: 113px;
-    }
 
     &--nutrition::after {
-      content: counter(number);
       top: -8px;
-      left: 113px;
+      right: -17px;
     }
 
     &--change::after {
-      content: counter(number);
       top: -8px;
-      left: 115px;
     }
   }
 
