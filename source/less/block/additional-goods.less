@@ -1,5 +1,4 @@
 .additional-goods {
-  padding-top: 27px;
   padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
@@ -13,41 +12,82 @@
 
 .additional-goods__wrapper {
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    column-gap: 80px;
+    grid-template-columns: 245px 245px 245px 245px;
   }
 }
 
 .additional-goods__list {
   margin-bottom: 40px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 68px;
+    border: 1px solid @special-grey2;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 896px;
-    margin-right: auto;
+    grid-column-start: 1;
+    grid-column-end: 4;
     margin-bottom: 0;
+    border: none;
   }
 }
 
 .additional-goods__title {
+  position: relative;
+  margin-top: 3px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 30px;
   font-weight: normal;
-}
 
-.additional-goods__item-title {
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    min-width: 161px;
-    margin-right: 168px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: -19px;
+    width: 52px;
+    height: 2px;
+    background: @basic-green;
   }
-}
 
-.additional-goods__item {
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 38px;
+    margin-bottom: 78px;
+    font-size: 36px;
+    line-height: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -67px;
+      width: 29px;
+      height: 2px;
+      background: @basic-green;
+    }
+
+    &::after {
+      top: 24px;
+      right: -30px;
+      width: 327px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    display: flex;
-    align-items: baseline;
+    margin-left: 0;
+
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+
+    &::after {
+      right: -110px;
+      width: 957px;
+    }
   }
 }
 
@@ -55,16 +95,117 @@
   color: @basic-black;
 }
 
-.additional-goods__product-value {
-  font-family: @font-arial;
-  color: @special-darkgrey2;
+.additional-goods__item-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 161px;
+    margin-right: 163px;
+  }
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 16px;
+  border-top: 1px solid @special-grey2;
+
+  &:last-of-type {
+    border-bottom: 1px solid @special-grey2;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 36px 28px 37px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 16px 0;
+
+    &:last-of-type {
+      border-bottom: 1px solid @special-grey2;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid @special-grey2;
+    }
+  }
+}
+
+.additional-goods__item-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additional-goods__table {
+  width: 100%;
+  margin-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    width: 235px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__product-table {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
     width: 286px;
+    justify-content: space-between;
+  }
+}
+
+.additional-goods__product-value {
+  padding: 0;
+  font-family: @font-arial;
+  color: @special-darkgrey2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+}
+
+.additional-goods__product-price {
+  @media (min-width: @tablet-width) {
+    min-width: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 43px;
+    text-align: left;
   }
 }
 
