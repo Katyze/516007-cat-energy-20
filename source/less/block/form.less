@@ -1,5 +1,5 @@
 .form {
-  padding-top: 18px;
+  padding-top: 28px;
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -34,7 +34,7 @@
 .form__description {
   width: 230px;
   margin-top: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -61,7 +61,7 @@
 }
 
 .form__fieldset-wrapper {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 73px;
@@ -71,7 +71,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    margin-bottom: 68px;
+    margin-bottom: 70px;
   }
 }
 
@@ -118,7 +118,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 46px;
-    padding-bottom: 52px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
@@ -150,18 +150,18 @@
 }
 
 .form__fieldset-contact {
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 
   & .form__fieldset-wrapper {
     margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 43px;
+    padding-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 46px;
+    padding-bottom: 47px;
   }
 }
 
@@ -170,11 +170,7 @@
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 61px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 63px;
+    padding-bottom: 64px;
   }
 }
 
@@ -238,8 +234,9 @@
     margin-bottom: 75px;
 
     &::before {
-      right: -110px;
-      width: 777px;
+      left: 552px;
+      width: calc(100vw - 552px);
+      max-width: 778px;
     }
 
     &::after {
@@ -284,8 +281,9 @@
 
   @media (min-width: @desktop-width) {
     &::before {
-      right: -110px;
-      width: 1108px;
+      left: 222px;
+      width: calc(100vw - 222px);
+      max-width: 1108px;
     }
 
     &::after {
@@ -330,9 +328,9 @@
 
   @media (min-width: @desktop-width) {
     &::before {
-      top: 24px;
-      right: -110px;
-      width: 1078px;
+      left: 252px;
+      width: calc(100vw - 252px);
+      max-width: 1078px;
     }
 
     &::after {
