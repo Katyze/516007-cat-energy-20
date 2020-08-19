@@ -20,6 +20,27 @@
   }
 }
 
+.order-gift__image {
+  position: absolute;
+  top: 64px;
+  left: 112px;
+  width: 56px;
+  height: 60px;
+
+  & path {
+    fill: @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 62px;
+    left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 97px;
+  }
+}
+
 .order-gift__text {
   width: 162px;
   margin: 0 auto;
@@ -28,24 +49,6 @@
   text-align: center;
   font-family: @font-arial;
   color: @basic-white;
-
-  &::before {
-    content: url("../img/icon-gift.svg");
-    position: absolute;
-    top: 64px;
-    left: 112px;
-    width: 56px;
-    height: 60px;
-
-    @media (min-width: @tablet-width) {
-      top: 62px;
-      left: 90px;
-    }
-
-    @media (min-width: @desktop-width) {
-      left: 97px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     text-align: start;
