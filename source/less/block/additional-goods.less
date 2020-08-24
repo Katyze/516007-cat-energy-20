@@ -38,43 +38,43 @@
   position: relative;
   margin-top: 3px;
   margin-bottom: 30px;
+  padding-right: 22px;
   font-size: 24px;
   line-height: 30px;
   font-weight: normal;
+  background-color: @basic-white;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 18px;
-    right: -19px;
-    width: 52px;
+    z-index: -1;
+    width: 100vw;
     height: 2px;
     background: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
-    display: inline-block;
+    width: 416px;
     margin-top: 0;
     padding-left: 37px;
     padding-right: 38px;
     margin-bottom: 77px;
     font-size: 36px;
     line-height: 40px;
-    background-color: @basic-white;
 
-    &::after {
+    &::before {
       top: 24px;
-      left: calc(768px - 100vw);
-      z-index: -1;
-      width: 100vw;
+      left: calc((-100vw + 708px) / 2);
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 0;
+    padding-left: 40px;
+    margin-left: -40px;
 
-    &::after {
-      left: calc(1380px - 100vw);
+    &::before {
+      left: calc((-100vw + 1300px) / 2);
     }
   }
 }

@@ -1,4 +1,6 @@
 .site-list {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +12,23 @@
 
   @media (min-width: @desktop-width) {
     min-height: 170px;
+  }
+}
+
+.site-list--cat-background {
+  @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      top: -2px;
+      right: -110px;
+      content: url("../img/index-background-desktop@1x.jpg");
+      width: 720px;
+      height: 696px;
+
+      @media (min-resolution: @retina-dppx) {
+        background: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
   }
 }
 
@@ -52,6 +71,12 @@
 
   @media (min-width: @tablet-width) {
     padding: 20px 10px 21px 10px;
+  }
+}
+
+.site-link--index {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
   }
 }
 

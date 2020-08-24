@@ -76,12 +76,38 @@
 }
 
 .contacts__map {
-  display: block;
-  width: 100%;
-  height: 362px;
-  border: none;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
+  & iframe {
+    display: block;
+    width: 100%;
+    height: 362px;
+    border: none;
+  }
 
   @media (min-width: @tablet-width) {
-    height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+
+    & iframe {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }

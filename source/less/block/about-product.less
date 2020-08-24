@@ -71,7 +71,6 @@
       top: -10px;
     }
 
-
     &--nutrition::after {
       top: -8px;
       right: -17px;
@@ -85,7 +84,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -4px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -95,6 +94,7 @@
 
     @media (min-width: @tablet-width) {
       top: 30px;
+      left: 1px;
       width: 80px;
       height: 80px;
     }
@@ -102,17 +102,65 @@
 
   &--benefit::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media
+    (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--composition::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media
+    (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--nutrition::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media
+    (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--change::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media
+    (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--benefit::after {
+      right: 16px;
+    }
+
+    &--nutrition::after {
+      top: -10px;
+      right: -1px;
+    }
+
+    &--change::after {
+      top: -10px;
+      right: -3px;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.about-product__item--change {
+  @media (min-width: @tablet-width) {
+    span {
+      display: block;
+    }
   }
 }
