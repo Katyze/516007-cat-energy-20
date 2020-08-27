@@ -4,24 +4,25 @@
   background-repeat: no-repeat;
 
   @media (min-resolution: @retina-dppx) {
-    background: url("../img/index-background-mobile@2x.jpg");
+    background-image: url("../img/index-background-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
     background-image: none;
-    padding-top: 32px;
+    padding-top: 49px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 606px;
+    min-height: 649px;
+    padding-top: 75px;
     padding-bottom: 50px;
   }
 }
 
 .promo__wrapper {
   position: relative;
-  padding-top: 26px;
-  padding-bottom: 24px;
+  padding-top: 28px;
+  padding-bottom: 22px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -54,7 +55,7 @@
 
 .promo__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding: 0;
   font-size: 36px;
   line-height: 36px;
@@ -87,6 +88,8 @@
 
 .promo__link {
   font-size: inherit;
+  padding-top: 11px;
+
 
   @media (min-width: @tablet-width) {
     position: absolute;
