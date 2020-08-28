@@ -1,34 +1,50 @@
 .sample-program {
-  background-color: @basic-grey;
+  background-color: @background-grey;
+  padding-top: 27px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 0;
     background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+  }
+}
+
+.sample-program__wrapper-desktop {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 67px;
+    background-color: @background-grey;
   }
 }
 
 .sample-program__wrapper {
-  padding-top: 27px;
-  padding-bottom: 25px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 570px 690px;
+    width: @desktop-container;
+    margin: 0 auto;
+    padding-left: 40px;
   }
 }
 
 .sample-program__wrapper-background {
+  margin-bottom: 34px;
+
   @media (min-width: @tablet-width) {
-    padding: 40px 30px 54px 30px;
+    margin-bottom: 0;
+    padding: 40px 30px 221px 30px;
     background-color: @basic-white;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 570px;
-    padding: 57px 40px 69px 40px;
+    width: 520px;
+    padding: 70px 0 0 0;
+    margin: 0;
+    background-color: @background-grey;
   }
 }
 
@@ -42,11 +58,11 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 64px;
-    margin-bottom: 63px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 145px;
+    margin-bottom: 74px;
   }
 }
 
@@ -130,13 +146,17 @@
   line-height: 13px;
   text-align: center;
   color: @special-darkgrey2;
-  background-color: @basic-grey;
+  background-color: @background-grey;
 
   @media (min-width: @tablet-width) {
     top: 61px;
     font-size: inherit;
     line-height: inherit;
     background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @background-grey;
   }
 }
 

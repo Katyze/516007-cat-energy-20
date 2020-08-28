@@ -1,3 +1,146 @@
+.slider {
+  @media (min-width: @tablet-width) {
+    background-color: @background-grey;
+  }
+}
+
+.slider-wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px 67px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .slider__image-list {
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.slider__image {
+  width: 320px;
+  height: 240px;
+
+  @media (min-width: @tablet-width) {
+    width: 690px;
+    height: 517px;
+    margin-left: 16px;
+    margin-top: -169px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-top: -189px;
+  }
+}
+
+.slider__image--disabled {
   display: none;
+}
+
+.slider__toggle {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 196px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 571px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-left: 79px;
+  }
+}
+
+.slider__button {
+  padding: 0;
+  padding-bottom: 7px;
+  border: none;
+  font-family: @font-oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+  }
+}
+
+.slider__range {
+  position: absolute;
+  top: 3px;
+  left: 55px;
+  width: 84px;
+  height: 14px;
+  background-color: @basic-white;
+  border: 1px solid @special-grey2;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 72px;
+    width: 428px;
+    height: 6px;
+    background-color: @special-grey2;
+    border: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 35px;
+    height: 6px;
+    background-color: @basic-green;
+    border-radius: 6px;
+
+    @media (min-width: @tablet-width) {
+      width: 34px;
+      height: 34px;
+      background-color: @basic-white;
+      border: 1px solid @special-grey2;
+      border-radius: 50%;
+      top: -14px;
+      left: 0;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 8px;
+      height: 8px;
+      background-color: @basic-green;
+      border-radius: 50%;
+      top: -1px;
+      left: 13px;
+    }
+  }
 }
