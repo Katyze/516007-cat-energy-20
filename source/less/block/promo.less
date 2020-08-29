@@ -3,13 +3,18 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
-    padding-left: 112px;
-    padding-top: 32px;
+    padding-top: 49px;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 649px;
+    padding-top: 75px;
     padding-bottom: 50px;
   }
 }
@@ -22,6 +27,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,17 +37,25 @@
 
 .promo__text {
   @media (min-width: @tablet-width) {
-    margin-left: 6px;
+    margin-left: 87px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 8px;
+    margin-left: 80px;
+  }
+}
+
+.promo__product {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -61px;
+    right: 219px;
   }
 }
 
 .promo__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding: 0;
   font-size: 36px;
   line-height: 36px;
@@ -64,6 +78,7 @@
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 18px;
     font-size: 20px;
     line-height: 24px;
     text-align: left;
@@ -73,11 +88,13 @@
 
 .promo__link {
   font-size: inherit;
+  padding-top: 11px;
+
 
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 230px;
-    left: 0;
+    left: 82px;
     width: 244px;
     padding: 15px 10px;
     font-size: 20px;
@@ -86,6 +103,6 @@
 
   @media (min-width: @desktop-width) {
     top: 253px;
-    left: 8px;
+    left: 81px;
   }
 }

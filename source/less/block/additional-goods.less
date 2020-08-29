@@ -1,3 +1,6 @@
+@headline-tablet-catalog: calc((708px - 100vw) / 2);
+@headline-desktop-catalog: calc((1300px - 100vw) / 2);
+
 .additional-goods {
   padding-bottom: 35px;
 
@@ -19,7 +22,7 @@
 }
 
 .additional-goods__list {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 67px;
@@ -36,45 +39,46 @@
 
 .additional-goods__title {
   position: relative;
+  width: 250px;
   margin-top: 3px;
   margin-bottom: 30px;
+  padding-right: 22px;
   font-size: 24px;
   line-height: 30px;
   font-weight: normal;
+  background-color: @basic-white;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 18px;
-    right: -19px;
-    width: 52px;
+    z-index: -1;
+    width: 100vw;
     height: 2px;
-    background: @basic-green;
+    background-color: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
-    display: inline-block;
+    width: 416px;
     margin-top: 0;
     padding-left: 37px;
     padding-right: 38px;
     margin-bottom: 77px;
     font-size: 36px;
     line-height: 40px;
-    background-color: @basic-white;
 
-    &::after {
+    &::before {
       top: 24px;
-      left: calc(768px - 100vw);
-      z-index: -1;
-      width: 100vw;
+      left: @headline-tablet-catalog;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 0;
+    padding-left: 40px;
+    margin-left: -40px;
 
-    &::after {
-      left: calc(1380px - 100vw);
+    &::before {
+      left: @headline-desktop-catalog;
     }
   }
 }
@@ -104,7 +108,7 @@
 
 .additional-goods__item {
   padding-top: 13px;
-  padding-bottom: 17px;
+  padding-bottom: 16px;
   border-top: @solid-line;
 
   &:last-of-type {
@@ -112,8 +116,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 129px;
-    padding: 25px 36px 28px 37px;
+    min-height: 139px;
+    padding: 24px 36px 27px 37px;
 
     &:last-of-type {
       border-bottom: none;
@@ -155,7 +159,7 @@
 
 .additional-goods__table {
   width: 100%;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     width: 235px;

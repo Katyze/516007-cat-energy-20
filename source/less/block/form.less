@@ -1,14 +1,14 @@
 .form {
-  padding-top: 17px;
+  padding-top: 18px;
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 31px;
+    padding-top: 48px;
     padding-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 15px;
+    padding-top: 58px;
     padding-bottom: 82px;
   }
 }
@@ -61,10 +61,10 @@
 }
 
 .form__fieldset-wrapper {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 73px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,7 +82,7 @@
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 
@@ -100,9 +100,9 @@
     position: absolute;
     left: -20px;
     bottom: 0;
-    width: 320px;
+    width: @mobile-width;
     height: 1px;
-    background: @line-grey2;
+    background-color: @line-grey2;
   }
 
   @media (min-width: @tablet-width) {
@@ -157,7 +157,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 44px;
+    padding-bottom: 46px;
   }
 
   @media (min-width: @desktop-width) {
@@ -170,7 +170,7 @@
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 64px;
+    padding-bottom: 63px;
   }
 }
 
@@ -187,46 +187,41 @@
 }
 
 .form__legend {
+  display: inline-block;
   padding: 0;
   font-size: 24px;
   line-height: 26px;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    margin-left: -39px;
+    padding-left: 39px;
     font-size: 36px;
     line-height: 38px;
   }
 }
 
 .form__legend-contact {
+  width: 202px;
   margin-bottom: 33px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    right: -20px;
-    width: 99px;
+    top: 18px;
+    z-index: -1;
+    width: 100vw;
     height: 2px;
-    background: @basic-green;
+    background-color: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
+    width: 593px;
     margin-bottom: 76px;
 
     &::before {
-      top: 23px;
-      right: -67px;
-      width: 145px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 23px;
-      left: -69px;
-      width: 30px;
-      height: 2px;
-      background: @basic-green;
+      top: 24px;
+      left: @headline-tablet;
     }
   }
 
@@ -234,108 +229,67 @@
     margin-bottom: 75px;
 
     &::before {
-      left: 552px;
-      width: calc(100vw - 552px);
-      max-width: 778px;
-    }
-
-    &::after {
-      left: -110px;
-      width: 70px;
+      left: @headline-desktop;
     }
   }
 }
 
 .form__legend-comment {
+  width: 143px;
   margin-bottom: 34px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    right: -20px;
-    width: 158px;
+    top: 23px;
+    z-index: -1;
+    width: 100vw;
     height: 2px;
-    background: @basic-green;
+    background-color: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
+    width: 259px;
     margin-bottom: 75px;
 
     &::before {
-      top: 23px;
-      right: -67px;
-      width: 479px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 23px;
-      left: -69px;
-      width: 30px;
-      height: 2px;
-      background: @basic-green;
+      left: @headline-tablet;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
-      left: 222px;
-      width: calc(100vw - 222px);
-      max-width: 1108px;
-    }
-
-    &::after {
-      left: -110px;
-      width: 70px;
+      left: @headline-desktop;
     }
   }
 }
 
 .form__legend-addition {
+  width: 165px;
   margin-bottom: 38px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 15px;
-    right: -20px;
-    width: 136px;
+    top: 23px;
+    z-index: -1;
+    width: 100vw;
     height: 2px;
-    background: @basic-green;
+    background-color: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
+    width: 291px;
     margin-bottom: 50px;
 
     &::before {
-      top: 23px;
-      right: -67px;
-      width: 446px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 23px;
-      left: -69px;
-      width: 30px;
-      height: 2px;
-      background: @basic-green;
+      left: @headline-tablet;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
-      left: 252px;
-      width: calc(100vw - 252px);
-      max-width: 1078px;
-    }
-
-    &::after {
-      left: -110px;
-      width: 70px;
+      left: @headline-desktop;
     }
   }
 }
@@ -447,11 +401,11 @@
     font-size: 20px;
     line-height: 30px;
 
-    &[type="email"] {
+    &--email {
       padding-left: 23px;
     }
 
-    &[type="tel"] {
+    &--tel {
       padding-left: 16px;
     }
   }
