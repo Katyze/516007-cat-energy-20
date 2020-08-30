@@ -396,6 +396,15 @@
   font-family: inherit;
   border: 1px solid @line-grey3;
 
+  &:hover {
+    border: 1px solid @special-grey2;
+  }
+
+  &:active, &:focus {
+    outline: none;
+    border: 1px solid @special-darkgrey2;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 10px 10px 10px 21px;
     font-size: 20px;
