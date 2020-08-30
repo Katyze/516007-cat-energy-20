@@ -18,19 +18,19 @@
           <img src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи">
         </picture>
       </a>
-      <nav class="main-nav" aria-label="Навигация по сайту">
-        <button class="main-nav__button" type="button">
+      <nav class="main-nav main-nav--closed" aria-label="Навигация по сайту">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открытие/закрытие меню</span>
         </button>
         <ul class="main-nav__list site-list site-list--cat-background list">
           <li class="site-list__item">
-            <a class="site-list__link site-link--index">Главная</a>
+            <a class="site-list__link site-list__link--index">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-link--index" href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link site-list__link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-link--index site-list__link--last" href="form.html">Подбор программы</a>
+            <a class="site-list__link site-list__link--index site-list__link--last" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -88,42 +88,61 @@
       </ul>
     </section>
     <section class="sample-program">
-      <div class="sample-program__wrapper container">
-        <div class="sample-program__wrapper-background">
-          <h3 class="sample-program__title">Живой пример</h3>
-          <p class="sample-program__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-            Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="sample-program__wrapper-description">
-            <dl class="sample-program__description-list">
-              <div class="sample-program__description-item">
-                <dt class="sample-program__description-term">5 кг</dt>
-                <dd class="sample-program__description-details sample-program__description-details--weight">снижение
-                  веса</dd>
-              </div>
-              <div class="sample-program__description-item">
-                <dt class="sample-program__description-term">60 дней</dt>
-                <dd class="sample-program__description-details sample-program__description-details--time">затрачено
-                  времени</dd>
-              </div>
-            </dl>
-            <p class="sample-program__cost">Затраты на питание: <span>15 000 руб.</span></p>
+      <h3 class="sample-program__title container">Живой пример</h3>
+      <div class="sample-program__wrapper-desktop">
+        <div class="sample-program__wrapper">
+          <div class="sample-program__wrapper-background container">
+            <p class="sample-program__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+              Energy
+              Slim. Отличный результат без
+              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="sample-program__wrapper-description">
+              <dl class="sample-program__description-list">
+                <div class="sample-program__description-item">
+                  <dt class="sample-program__description-term">5 кг</dt>
+                  <dd class="sample-program__description-details sample-program__description-details--weight">снижение
+                    веса</dd>
+                </div>
+                <div class="sample-program__description-item">
+                  <dt class="sample-program__description-term">60 дней</dt>
+                  <dd class="sample-program__description-details sample-program__description-details--time">затрачено
+                    времени</dd>
+                </div>
+              </dl>
+              <p class="sample-program__cost">Затраты на питание: <span>15 000 руб.</span></p>
+            </div>
           </div>
-        </div>
-        <div class="slider">
-          <ul class="slider__image-list list">
-            <li class="slider__image-item slider__image-item--before">
-              <img class="slider__image" src="img/before-mobile@1x.png" alt="Фото кота до">
-            </li>
-            <li class="slider__image-item slider__image-item--after">
-              <img class="slider__image" src="img/after-mobile@1x.png" alt="Фото кота после">
-            </li>
-          </ul>
-          <div class="slider__control">
-            <button class="slider__button slider__button--prev" type="button"
-              aria-label="Переключает изображения с котами назад">Было</button>
-            <button class="slider__button slider__button--next" type="button"
-              aria-label="Переключает изображения с котами вперед">Стало</button>
+          <div class="slider">
+            <div class="slider-wrapper">
+              <ul class="slider__image-list list">
+                <li class="slider__image-item slider__image-item--active">
+                  <picture>
+                    <source media="(min-width: 1320px)"
+                      srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                    <img class="slider__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
+                      alt="Изображение кота до">
+                  </picture>
+                </li>
+                <li class="slider__image-item slider__image-item--disabled">
+                  <picture>
+                    <source media="(min-width: 1320px)"
+                      srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                    <img class="slider__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"
+                      alt="Изображение кота после">
+                  </picture>
+                </li>
+              </ul>
+              <div class="slider__toggle">
+                <button class="slider__button slider__button--prev" type="button"
+                  aria-label="Переключает изображения с котами назад">Было</button>
+                <span class="slider__range"></span>
+                <button class="slider__button slider__button--next" type="button"
+                  aria-label="Переключает изображения с котами вперед">Стало</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -135,7 +154,7 @@
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
       </div>
       <div class="contacts__map">
-        <iframe class="contacts__map--iframe"
+        <iframe class="contacts__map-iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.2378918292!2d30.32051491863738!3d59.938712817680646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595881327202!5m2!1sru!2sru"></iframe>
       </div>
     </section>
@@ -200,6 +219,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z" />
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
