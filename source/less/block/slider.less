@@ -86,6 +86,14 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     border-bottom: 1px dotted fade(@basic-black, 40%);
+
+    &:hover {
+      border-bottom: 1px solid fade(@basic-black, 40%);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
