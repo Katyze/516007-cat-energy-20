@@ -326,6 +326,7 @@
   border: 1px solid @special-grey2;
   border-radius: 50%;
 
+
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
@@ -387,6 +388,19 @@
   }
 }
 
+
+.form__input-radio:hover + label::before,
+.form__input-radio:focus + label::before,
+.form__input-checkbox:hover + label::before,
+.form__input-checkbox:focus + label::before {
+  border: 1px solid @radio-outline;
+}
+
+.form__input-radio:disabled + label::before,
+.form__input-checkbox:disabled + label::before {
+  color: fade(@basic-black, 30%);
+}
+
 .form__input-text {
   position: relative;
   flex-grow: 1;
@@ -402,7 +416,11 @@
 
   &:active, &:focus {
     outline: none;
-    border: 1px solid @special-darkgrey2;
+    border: 2px solid @special-darkgrey2;
+  }
+
+  &:required:invalid {
+    border: 1px solid @basic-coral;
   }
 
   @media (min-width: @tablet-width) {
