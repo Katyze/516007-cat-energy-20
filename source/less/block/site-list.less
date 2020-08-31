@@ -1,6 +1,15 @@
 .site-list {
   position: relative;
 
+
+  & a:not(.site-list__link--active):hover {
+    opacity: 0.6;
+  }
+
+  & a:not(.site-list__link--active):active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -68,14 +77,6 @@
   display: block;
   padding: 22px 10px 20px 10px;
   color: @basic-black;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .site-list__link--active {

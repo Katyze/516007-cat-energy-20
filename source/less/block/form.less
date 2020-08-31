@@ -401,6 +401,11 @@
   color: fade(@basic-black, 30%);
 }
 
+.form__input-radio:focus + label,
+.form__input-checkbox:focus + label {
+  text-decoration: underline;
+}
+
 .form__input-text {
   position: relative;
   flex-grow: 1;
