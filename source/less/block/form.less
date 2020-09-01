@@ -326,7 +326,6 @@
   border: 1px solid @special-grey2;
   border-radius: 50%;
 
-
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
@@ -388,7 +387,6 @@
   }
 }
 
-
 .form__input-radio:hover + label::before,
 .form__input-radio:focus + label::before,
 .form__input-checkbox:hover + label::before,
@@ -419,7 +417,8 @@
     border: 1px solid @special-grey2;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     outline: none;
     border: 2px solid @special-darkgrey2;
   }

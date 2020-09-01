@@ -1,7 +1,6 @@
 .site-list {
   position: relative;
 
-
   & a:not(.site-list__link--active):hover {
     opacity: 0.6;
   }
@@ -82,6 +81,7 @@
 .site-list__link--active {
   @media (min-width: @tablet-width) {
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -97,6 +97,7 @@
 .site-list__link--index {
   @media (min-width: @desktop-width) {
     color: @basic-white;
+
     &::after {
       background-color: @basic-white;
     }
