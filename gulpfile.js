@@ -8,8 +8,7 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-// const renameSprite = require("rename");
-// const svgstore = require("gulp-svgstore");
+const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -81,14 +80,14 @@ exports.createWebp = createWebp;
 
 // Sprite
 
-// const sprite = () => {
-//   return gulp.src("source/img/**/icon-*.svg")
-//     .pipe(svgstore())
-//     .pipe(renameSprite("sprite.svg"))
-//     .pipe(gulp.dest("source/img"));
-//   }
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
+  }
 
-// exports.sprite = sprite;
+exports.sprite = sprite;
 
 
 exports.default = gulp.series(
