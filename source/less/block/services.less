@@ -207,7 +207,22 @@
     width: 24px;
     height: 12px;
     top: 0;
-    right: -39px;
+    right: -40px;
+  }
+
+  &:hover::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+    right: -48px;
+    width: 32px;
+    height: 12px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
@@ -218,11 +233,19 @@
       top: -3px;
       right: -49px;
     }
+
+    &:hover::after {
+      right: -57px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     &::after {
       right: -52px;
+    }
+
+    &:hover::after {
+      right: -60px;
     }
   }
 }

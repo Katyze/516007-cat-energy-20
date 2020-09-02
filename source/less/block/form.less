@@ -387,6 +387,23 @@
   }
 }
 
+.form__input-radio:hover + label::before,
+.form__input-radio:focus + label::before,
+.form__input-checkbox:hover + label::before,
+.form__input-checkbox:focus + label::before {
+  border: 1px solid @radio-outline;
+}
+
+.form__input-radio:disabled + label::before,
+.form__input-checkbox:disabled + label::before {
+  color: fade(@basic-black, 30%);
+}
+
+.form__input-radio:focus + label,
+.form__input-checkbox:focus + label {
+  text-decoration: underline;
+}
+
 .form__input-text {
   position: relative;
   flex-grow: 1;
@@ -395,6 +412,20 @@
   text-transform: uppercase;
   font-family: inherit;
   border: 1px solid @line-grey3;
+
+  &:hover {
+    border: 1px solid @special-grey2;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: 2px solid @special-darkgrey2;
+  }
+
+  &:required:invalid {
+    border: 1px solid @basic-coral;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 10px 10px 10px 21px;
