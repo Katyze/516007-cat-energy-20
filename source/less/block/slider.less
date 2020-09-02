@@ -27,6 +27,8 @@
 
 .slider__image-list {
   display: flex;
+  justify-content: space-between;
+  width: 690px;
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
@@ -66,8 +68,10 @@
 }
 
 .slider__image-item {
+  transition: width 1s ease-in-out;
+
   &--before {
-    width: calc(690px - var(--slide-width));
+    width: calc(730px - var(--slide-width));
   }
 
   &--after {
@@ -127,6 +131,7 @@
   background-color: @basic-white;
   border: 1px solid @special-grey2;
   border-radius: 6px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: 8px;
@@ -146,6 +151,7 @@
     height: 6px;
     background-color: @basic-green;
     border-radius: 6px;
+    transition: left 1s ease-in-out;
 
     @media (min-width: @tablet-width) {
       top: -14px;
