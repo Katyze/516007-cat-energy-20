@@ -1,50 +1,44 @@
 .sample-program {
-  background-color: @background-grey;
   padding-top: 27px;
-  padding-bottom: 18px;
+  padding-bottom: 28px;
+  background-color: @background-grey;
 
   @media (min-width: @tablet-width) {
     padding-top: 40px;
-    padding-bottom: 0;
-    background-color: @basic-white;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 57px;
-  }
-}
-
-.sample-program__wrapper-desktop {
-  @media (min-width: @desktop-width) {
     padding-bottom: 67px;
-    background-color: @background-grey;
+    background: linear-gradient(to bottom, @basic-white 618px, @background-grey 618px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 6px;
+    padding-bottom: 17px;
+    background: linear-gradient(to bottom, @basic-white 195px, @basic-grey 195px);
   }
 }
 
 .sample-program__wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 570px 690px;
+    grid-template-columns: 570px 650px;
     width: @desktop-container;
-    margin: 0 auto;
-    padding-left: 40px;
+    padding: 0 40px;
   }
 }
 
-.sample-program__wrapper-background {
-  margin-bottom: 34px;
+.sample-program__wrapper-example {
+  padding: 0 20px 35px 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-    padding: 40px 30px 221px 30px;
-    background-color: @basic-white;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 520px;
-    padding: 70px 0 0 0;
-    margin: 0;
-    background-color: @background-grey;
+    padding: 0;
+    padding-bottom: 53px;
   }
 }
 
@@ -58,11 +52,12 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 64px;
-    margin-bottom: 23px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 74px;
+    margin-top: 51px;
+    margin-bottom: 144px;
   }
 }
 
@@ -156,7 +151,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-color: @background-grey;
+    background-color: @basic-grey;
   }
 }
 
