@@ -12,7 +12,7 @@ var leftButton = document.querySelector(".slider__button--prev");
 var rightButton = document.querySelector(".slider__button--next");
 
 leftButton.addEventListener("click", function () {
-  root.style.setProperty('--slide-width', '0');
+  root.style.setProperty('--slide-width', '0px');
 });
 
 rightButton.addEventListener("click", function () {
