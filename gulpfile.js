@@ -23,7 +23,7 @@ const styles = () => {
     ]))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
-    .pipe(sourcemap.write("."))
+    .pipe(sourcemap.write("gulp sprite."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }

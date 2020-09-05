@@ -76,6 +76,7 @@
 }
 
 .form__input-wrapper {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -376,7 +377,7 @@
   left: 5px;
   width: 21px;
   height: 16px;
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/icon-tick-green.svg");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
@@ -388,15 +389,13 @@
 }
 
 .form__input-radio:hover + label::before,
-.form__input-radio:focus + label::before,
-.form__input-checkbox:hover + label::before,
-.form__input-checkbox:focus + label::before {
+.form__input-checkbox:hover + label::before {
   border: 1px solid @radio-outline;
 }
 
-.form__input-radio:disabled + label::before,
-.form__input-checkbox:disabled + label::before {
-  color: fade(@basic-black, 30%);
+.form__input-radio:disabled + label,
+.form__input-checkbox:disabled + label {
+  opacity: 0.3;
 }
 
 .form__input-radio:focus + label,
@@ -405,7 +404,6 @@
 }
 
 .form__input-text {
-  position: relative;
   flex-grow: 1;
   padding: 9px 10px 9px 13px;
   font-size: 16px;
@@ -415,6 +413,15 @@
 
   &:hover {
     border: 1px solid @special-grey2;
+  }
+
+  &:focus + .form__input-icon,
+  &:active + .form__input-icon {
+    fill: @basic-green;
+  }
+
+  &:required:invalid + .form__input-icon {
+    fill: @basic-coral;
   }
 
   &:active,
@@ -442,6 +449,13 @@
   }
 }
 
+.form__input-icon {
+  position: absolute;
+  right: 17px;
+  top: 18px;
+  fill: @icon-input;
+}
+
 .form__input-textarea {
   width: 100%;
   min-height: 150px;
@@ -458,6 +472,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
