@@ -36,7 +36,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -126,6 +126,15 @@ const build = gulp.series(
 
 exports.build = build;
 
+// start
+
+const start = gulp.series(
+  build,
+  server,
+  watcher
+);
+
+exports.start = start;
 
 exports.default = gulp.series(
   styles, server, watcher
