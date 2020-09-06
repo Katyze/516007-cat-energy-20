@@ -13,7 +13,9 @@
 @radio-outline: #bababa;
 @background-grey: #eaeaea;
 @basic-coral: #ff8282;
+@icon-input: #222222;
 @icon-grey: #666666;
+@icon-grey2: #d3d3d3;
 @solid-line: 1px solid #cdcdcd;
 @font-arial: "Arial", sans-serif;
 @font-oswald: "Oswald", "Arial", sans-serif;
@@ -25,3 +27,13 @@
 @retina-dppx: 2dppx;
 @headline-tablet: calc((630px - 100vw) / 2);
 @headline-desktop: calc((1220px - 100vw) / 2);
+
+:root {
+  --slide-width: 345px;
+  --slide-constant-width: 320px;
+  --range-position: 5px;
+
+  @media (min-width: @tablet-width) {
+      --slide-constant-width: 690px;
+  }
+}
