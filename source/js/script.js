@@ -12,11 +12,11 @@ var leftButton = document.querySelector(".slider__button--prev");
 var rightButton = document.querySelector(".slider__button--next");
 
 leftButton.addEventListener("click", function () {
-  root.style.setProperty('--slide-width', '0px');
+  root.style.setProperty('--slide-shift', '0px');
   root.style.setProperty('--range-position', '5px');
 });
 
 rightButton.addEventListener("click", function () {
-  root.style.setProperty('--slide-width', 'var(--slide-constant-width)');
+  root.style.setProperty('--slide-shift', 'var(--slide-constant-width)');
   root.style.setProperty('--range-position', '43px');
 });
