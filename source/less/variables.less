@@ -29,11 +29,17 @@
 @headline-desktop: calc((1220px - 100vw) / 2);
 
 :root {
-  --slide-shift: 345px;
+  --slide-shift: 0;
   --slide-constant-width: 320px;
   --range-position: 5px;
 
   @media (min-width: @tablet-width) {
+    --slide-shift: 352px;
     --slide-constant-width: 690px;
+    --range-position-tablet: 197px;
+  }
+
+  @media (min-width: @desktop-width) {
+    --slide-shift: 325px;
   }
 }
