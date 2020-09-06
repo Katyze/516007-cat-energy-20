@@ -27,3 +27,13 @@
 @retina-dppx: 2dppx;
 @headline-tablet: calc((630px - 100vw) / 2);
 @headline-desktop: calc((1220px - 100vw) / 2);
+
+:root {
+  --slide-width: 345px;
+  --slide-constant-width: 320px;
+  --range-position: 5px;
+
+  @media (min-width: @tablet-width) {
+      --slide-constant-width: 690px;
+  }
+}

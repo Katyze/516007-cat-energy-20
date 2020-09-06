@@ -1,11 +1,7 @@
-:root {
-  --slide-width: 345px;
-}
-
 .slider__image-list {
   display: flex;
   justify-content: space-between;
-  width: 690px;
+  width: var(--slide-constant-width);
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
@@ -32,7 +28,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 690px;
+    width: var(--slide-constant-width);
     height: 517px;
     margin-left: 16px;
   }
@@ -46,7 +42,7 @@
   transition: width 1s ease-in-out;
 
   &--before {
-    width: calc(690px - var(--slide-width));
+    width: calc(var(--slide-constant-width) - var(--slide-width));
   }
 
   &--after {
@@ -121,7 +117,7 @@
     content: "";
     position: absolute;
     top: 3px;
-    left: 5px;
+    left: var(--range-position);
     width: 35px;
     height: 6px;
     background-color: @basic-green;

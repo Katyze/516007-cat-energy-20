@@ -13,8 +13,10 @@ var rightButton = document.querySelector(".slider__button--next");
 
 leftButton.addEventListener("click", function () {
   root.style.setProperty('--slide-width', '0px');
+  root.style.setProperty('--range-position', '5px');
 });
 
 rightButton.addEventListener("click", function () {
-  root.style.setProperty('--slide-width', '690px');
+  root.style.setProperty('--slide-width', 'var(--slide-constant-width)');
+  root.style.setProperty('--range-position', '43px');
 });
