@@ -13,12 +13,10 @@ var rightButton = document.querySelector(".slider__button--next");
 
 leftButton.addEventListener("click", function () {
   root.style.setProperty('--slide-shift', '0px');
-  root.style.setProperty('--range-position', '5px');
-  root.style.setProperty('--range-position-tablet', '0px');
+  root.style.setProperty('--range-position', 'var(--range-position-left)');
 });
 
 rightButton.addEventListener("click", function () {
   root.style.setProperty('--slide-shift', 'var(--slide-constant-width)');
-  root.style.setProperty('--range-position', '43px');
-  root.style.setProperty('--range-position-tablet', '394px');
+  root.style.setProperty('--range-position', 'var(--range-position-right)');
 });
