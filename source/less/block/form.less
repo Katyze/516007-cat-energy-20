@@ -1,5 +1,5 @@
 .form {
-  padding-top: 18px;
+  padding-top: 25px;
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -171,6 +171,10 @@
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-bottom: 63px;
   }
 }
@@ -209,7 +213,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 17px;
     z-index: -1;
     width: 100vw;
     height: 2px;
@@ -242,7 +246,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 23px;
+    top: 15px;
     z-index: -1;
     width: 100vw;
     height: 2px;
@@ -255,6 +259,7 @@
 
     &::before {
       left: @headline-tablet;
+      top: 23px;
     }
   }
 
@@ -272,7 +277,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 23px;
+    top: 15px;
     z-index: -1;
     width: 100vw;
     height: 2px;
@@ -285,6 +290,7 @@
 
     &::before {
       left: @headline-tablet;
+      top: 23px;
     }
   }
 
@@ -451,9 +457,29 @@
 
 .form__input-icon {
   position: absolute;
-  right: 17px;
-  top: 18px;
   fill: @icon-input;
+
+  &--email {
+    top: 17px;
+    right: 16px;
+  }
+
+  &--tel {
+    top: 13px;
+    right: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--email {
+      top: 19px;
+      right: 18px;
+    }
+
+    &--tel {
+      top: 16px;
+      right: 16px;
+    }
+  }
 }
 
 .form__input-textarea {

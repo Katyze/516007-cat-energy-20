@@ -42,11 +42,11 @@
   transition: width 1s ease-in-out;
 
   &--before {
-    width: calc(var(--slide-constant-width) - var(--slide-width));
+    width: calc(var(--slide-constant-width) - var(--slide-shift));
   }
 
   &--after {
-    width: var(--slide-width);
+    width: var(--slide-shift);
   }
 }
 
@@ -111,6 +111,15 @@
     height: 6px;
     background-color: @special-grey2;
     border: none;
+
+    &:hover::after {
+      filter: drop-shadow(0 2px 4px fade(@basic-black, 19%));
+    }
+
+    &:active::after {
+      filter: drop-shadow(0 3px 5px fade(@basic-black, 20%));
+      box-shadow: 0 0 0 1px @basic-green;
+    }
   }
 
   &::after {
@@ -126,7 +135,7 @@
 
     @media (min-width: @tablet-width) {
       top: -14px;
-      left: calc(var(--slide-width) / 690 * 394);
+      left: var(--range-position);
       width: 34px;
       height: 34px;
       background-color: @basic-green;

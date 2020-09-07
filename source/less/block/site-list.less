@@ -28,11 +28,11 @@
     &::before {
       position: absolute;
       top: -2px;
-      right: -110px;
+      left: -121px;
       content: url("../img/index-background-desktop@1x.jpg");
-      width: 720px;
+      width: calc(50vw);
       height: 696px;
-      background-color: @basic-green;
+      background-color: @background-green;
 
       @media (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
@@ -77,6 +77,7 @@
   display: block;
   padding: 22px 10px 20px 10px;
   color: @basic-black;
+  transition: opacity 0.3s;
 }
 
 .site-list__link--active {
