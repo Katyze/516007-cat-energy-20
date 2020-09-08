@@ -24,6 +24,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -107,7 +108,7 @@ exports.minjs = minjs;
 
 const minhtml = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 };
 exports.minhtml = minhtml;

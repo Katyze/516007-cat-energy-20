@@ -20,7 +20,7 @@
           <img src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи">
         </picture>
       </a>
-      <nav class="main-nav main-nav--closed" aria-label="Навигация по сайту">
+      <nav class="main-nav main-nav--closed main-nav--nojs" aria-label="Навигация по сайту">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открытие/закрытие меню</span>
         </button>
@@ -52,11 +52,11 @@
             </div>
             <div class="form__input-wrapper">
               <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
-              <input class="form__input-text" id="cat-weight" type="number" placeholder="7" name="cat-weight" required>
+              <input class="form__input-text form__input-text--spin" id="cat-weight" type="number" placeholder="7" name="cat-weight" required>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label form__label--text" for="cat-age">Возраст (лет):</label>
-              <input class="form__input-text" id="cat-age" type="number" placeholder="7" name="cat-age">
+              <input class="form__input-text form__input-text--spin" id="cat-age" type="number" placeholder="7" name="cat-age">
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset-program">
