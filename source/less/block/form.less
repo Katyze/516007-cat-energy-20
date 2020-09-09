@@ -431,14 +431,15 @@
     fill: @basic-coral;
   }
 
-  &:active,
-  &:focus {
-    outline: none;
-    border: 2px solid @special-darkgrey2;
-  }
-
   &:required:invalid {
     border: 1px solid @basic-coral;
+  }
+
+  &:active,
+  &:focus,
+  &:required:focus {
+    outline: none;
+    border: 2px solid @special-darkgrey2;
   }
 
   @media (min-width: @tablet-width) {
